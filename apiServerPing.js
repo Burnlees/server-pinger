@@ -1,14 +1,14 @@
 import https from "https";
 
-const apiUrl = "https://burnlees-news.onrender.com/api/";
+const apiUrl = "your-render-api-url.com/api";
 
-exports.handler = async (event) => {
-    try {
-      await pingUrl(apiUrl);
-      console.log(`Successfully pinged ${apiUrl}`);
-    } catch (error) {
-      console.error(`Error pinging ${apiUrl}, ${error.message}`);
-    }
+export const handler = async (event) => {
+  try {
+    await pingUrl(apiUrl);
+    console.log(`Successfully pinged ${apiUrl}`);
+  } catch (error) {
+    console.error(`Error pinging ${apiUrl}, ${error.message}`);
+  }
 };
 
 const pingUrl = (url) => {
